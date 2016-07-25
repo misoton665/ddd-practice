@@ -3,7 +3,7 @@ package com.example.model
 import com.example.model.ExerciseModel.ExerciseList
 
 object WorkSpaceModel {
-  case class WorkSpace(identifier: Identifier[String], exerciseList: ExerciseList) extends Entity[WorkSpaceId]
+  case class WorkSpace(identifier: WorkSpaceName, exerciseList: ExerciseList) extends Entity[WorkSpaceName]
 
-  case class WorkSpaceId(value: String) extends Identifier[String]
+  case class WorkSpaceName(value: String) extends Identifier[String]
 }
