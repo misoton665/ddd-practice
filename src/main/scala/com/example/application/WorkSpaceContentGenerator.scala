@@ -15,7 +15,7 @@ object WorkSpaceContentGenerator {
   def generateUncreatedExercises(workSpace: WorkSpace, allExerciseList: ExerciseList): Unit = {
     val uncreatedExerciseList = findUncreatedExercises(workSpace, allExerciseList)
 
-    for(exercise <- uncreatedExerciseList) {
+    for(exercise <- uncreatedExerciseList.exercises) {
       generateExercise(exercise)
     }
   }
